@@ -64,6 +64,10 @@
       "json"
     ]
   },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest"
+  },
   "peerDependencies": {
     "@aws-cdk/core": "^1.57.0"
   },
