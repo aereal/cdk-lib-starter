@@ -37,7 +37,8 @@
   },
   "scripts": {
     "build": "tsc -p .",
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "jest --collectCoverage --coverageDirectory ./coverage"
   },
   "peerDependencies": {
     "@aws-cdk/core": "^1.68.0"
