@@ -69,18 +69,18 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "^1.57.0"
+    "@aws-cdk/core": "^1.68.0"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.57.0",
-    "@aws-cdk/cloud-assembly-schema": "^1.57.0",
-    "@aws-cdk/core": "^1.57.0",
-    "@aws-cdk/cx-api": "^1.57.0",
+    "@aws-cdk/assert": "^1.68.0",
+    "@aws-cdk/cloud-assembly-schema": "^1.68.0",
+    "@aws-cdk/core": "^1.68.0",
+    "@aws-cdk/cx-api": "^1.68.0",
     "@types/jest": "^26.0.9",
     "@types/node": "^14.0.27",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
-    "constructs": "^3.0.4",
+    "constructs": "^3.0.24",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
