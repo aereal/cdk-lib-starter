@@ -36,3 +36,9 @@ jobs:
         run: npm run test
       - name: build
         run: npm run build
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: lint
+        uses: reviewdog/action-eslint@v1
