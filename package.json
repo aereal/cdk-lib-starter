@@ -42,14 +42,14 @@
     "docs": "rm -rf docs/ && typedoc ./src"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "^1.68.0"
+    "@aws-cdk/core": "^1.69.0"
   },
   "devDependencies": {
     "@aereal/eslint-config": "^0.1.4",
-    "@aws-cdk/assert": "^1.68.0",
-    "@aws-cdk/cloud-assembly-schema": "^1.68.0",
-    "@aws-cdk/core": "^1.68.0",
-    "@aws-cdk/cx-api": "^1.68.0",
+    "@aws-cdk/assert": "^1.69.0",
+    "@aws-cdk/cloud-assembly-schema": "^1.69.0",
+    "@aws-cdk/core": "^1.69.0",
+    "@aws-cdk/cx-api": "^1.69.0",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.10",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
