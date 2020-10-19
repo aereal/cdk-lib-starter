@@ -89,5 +89,8 @@
     "prettier": "^2.0.5",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
+  },
+  "engines": {
+    "npm": ">= 7.0.0"
   }
 }
