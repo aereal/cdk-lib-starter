@@ -1,5 +1,5 @@
 import { expect as cdkExpect } from "@aws-cdk/assert";
-import { Stack, App } from "@aws-cdk/core";
+import { App, Stack } from "@aws-cdk/core";
 import { EmptyResource } from "../src/empty-resource";
 
 describe("EmptyResource", () => {
