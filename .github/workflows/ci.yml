@@ -28,6 +28,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
+      - name: install npm 7
+        run: npm i -g npm@7
       - name: install
         run: npm ci
       - name: test
