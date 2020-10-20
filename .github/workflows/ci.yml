@@ -121,8 +121,8 @@ jobs:
       - name: release
         run: npm run semantic-release -- --dry-run
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: 'dummy' # must be ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: 'dummy' # must be ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
   create-release-pull-request:
     needs: ci
