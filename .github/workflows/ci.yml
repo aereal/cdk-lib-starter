@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+      - release
   schedule:
     - cron: '0 1 * * *'
 jobs:
@@ -43,9 +44,9 @@ jobs:
         run: npm run build
       - name: generate docs
         run: npm run docs
-        if: matrix.node == '14.x' && github.ref == 'refs/heads/main'
+        if: matrix.node == '14.x' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release')
       - name: save docs
-        if: matrix.node == '14.x' && github.ref == 'refs/heads/main'
+        if: matrix.node == '14.x' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release')
         uses: actions/upload-artifact@v2
         with:
           name: docs
@@ -82,7 +83,7 @@ jobs:
   docs:
     needs: ci
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release'
     steps:
       - name: download docs artifact
         uses: actions/download-artifact@v2
@@ -123,3 +124,20 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
+  create-release-pull-request:
+    needs: ci
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release'
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: release
+      - run: |
+          git fetch origin main:main
+          git reset --hard main
+      - name: create release pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ github.token }}
+          title: Next stable release candidate
+          base: release
