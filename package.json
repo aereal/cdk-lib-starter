@@ -46,7 +46,7 @@
     "@aws-cdk/core": "^1.78.0"
   },
   "devDependencies": {
-    "@aereal/eslint-config": "^0.1.4",
+    "@aereal/eslint-config": "^0.1.6",
     "@aws-cdk/assert": "^1.78.0",
     "@aws-cdk/cloud-assembly-schema": "^1.78.0",
     "@aws-cdk/core": "^1.78.0",
