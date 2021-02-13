@@ -26,7 +26,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ matrix.node }}-npm-
       -
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
       - name: install npm 7
@@ -68,7 +68,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       -
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
       - name: download coverage artifact
@@ -109,7 +109,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-14.x-npm-
       -
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: 14.x
       - name: install npm 7
